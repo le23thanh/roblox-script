@@ -271,7 +271,7 @@ function Fluence:CreateWindow(config)
 	}
 	
 	function Window:CreateTab(name)
-		local tabOrder = #self.Tabs + 1
+		local tabOrder = #Window.Tabs + 1
 		
 		local tabButton = Instance.new("TextButton")
 		tabButton.Size = UDim2.new(1, 0, 0, 32)
