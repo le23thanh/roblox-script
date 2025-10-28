@@ -512,11 +512,11 @@ function Fluence:CreateWindow(config)
 			end)
 		end
 		
-	local allTabs = self.Tabs -- capture the tabs array in a local variable
+table.insert(self.Tabs, Tab)
 
 tabButton.MouseButton1Click:Connect(function()
-    for i = 1, #allTabs do
-        local t = allTabs[i]
+    for i = 1, #self.Tabs do
+        local t = self.Tabs[i]
         if t == Tab then
             t.Button.BackgroundColor3 = Color3.fromRGB(74, 149, 121)
             t.Button.TextColor3 = Color3.fromRGB(255, 255, 255)
