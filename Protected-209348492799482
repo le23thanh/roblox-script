@@ -530,7 +530,11 @@ function Fluence:CreateWindow(config)
 		end)
 		
 		if #self.Tabs == 1 then
-			tabButton.MouseButton1Click:Fire()
+			task.wait()
+			tabButton.BackgroundColor3 = Color3.fromRGB(74, 149, 121)
+			tabButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+			tabContent.Visible = true
+			self.CurrentTab = Tab
 		end
 		
 		return Tab
