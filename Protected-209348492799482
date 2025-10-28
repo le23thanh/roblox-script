@@ -515,12 +515,12 @@ function Fluence:CreateWindow(config)
 		table.insert(self.Tabs, Tab)
 		
 		tabButton.MouseButton1Click:Connect(function()
-			for _, tab in pairs(self.Tabs) do
+			for _, tab in pairs(Window.Tabs) do
 				if tab.Name == name then
 					tab.Button.BackgroundColor3 = Color3.fromRGB(74, 149, 121)
 					tab.Button.TextColor3 = Color3.fromRGB(255, 255, 255)
 					tab.Content.Visible = true
-					self.CurrentTab = tab
+					Window.CurrentTab = tab
 				else
 					tab.Button.BackgroundColor3 = Color3.fromRGB(45, 45, 50)
 					tab.Button.TextColor3 = Color3.fromRGB(180, 180, 180)
